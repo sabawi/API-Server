@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    {% if title %}
+    <title>{{ title }} - Test Server</title>
+    {% else %}
+    <title>Welcome to Test Python API Server</title>
+    {% endif %}
+</head>
+<body>
+<h1>Hi, {{ user.username }}!</h1>
+{% for post in posts %}
+<div style="background:yellow;"><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+{% endfor %}
+</body>
+{% endblock %}
