@@ -3,7 +3,7 @@ from flask import request
 from app import app
 
 
-@app.route('/authenticate', methods=['GET', 'POST'])
+@app.route('/authenticate', methods=['POST'])
 def authenticate():
     content = request.get_json()
     authentication = 'Failed'
